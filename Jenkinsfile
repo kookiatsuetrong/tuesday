@@ -6,5 +6,11 @@ pipeline {
         echo 'Initialize' 
       }
     }
+    stage('Compile') {
+      steps {
+        sh 'javac Start.java'
+        sh 'java Start'
+      }
+    }
   }
 }
